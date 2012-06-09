@@ -1,0 +1,37 @@
+nl:
+  refinery:
+    plugins:
+      bookings:
+        title: Bookings
+    bookings:
+      admin:
+        bookings:
+          actions:
+            create_new: Maak een nieuwe Booking
+            reorder: Wijzig de volgorde van de Bookings
+            reorder_done: Klaar met het wijzingen van de volgorde van de Bookings
+          records:
+            title: Bookings
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Bookings. Druk op 'Maak een nieuwe Booking' om de eerste aan te maken.
+          booking:
+            view_live_html: Bekijk deze booking op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze booking
+            delete: Verwijder deze booking voor eeuwig
+      bookings:
+        show:
+          other: Andere Bookings
+  activerecord:
+    attributes:
+      'refinery/bookings/booking':
+        customer_name: Customer Name
+        customer_phone: Customer Phone
+        customer_email: Customer Email
+        starting_location: Starting Location
+        ending_location: Ending Location
+        initial_pickup: Initial Pickup
+        secondary_pickup: Secondary Pickup
+        passenger_count: Passenger Count
+        price: Price
+        cab_type: Cab Type
+        completed: Completed

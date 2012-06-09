@@ -1,0 +1,77 @@
+<%= form_for [refinery, :bookings_admin, @booking] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @booking,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :customer_name -%>
+    <%= f.text_field :customer_name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :customer_phone -%>
+    <%= f.text_field :customer_phone  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :customer_email -%>
+    <%= f.text_field :customer_email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :starting_location -%>
+    <%= f.text_field :starting_location  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ending_location -%>
+    <%= f.text_field :ending_location  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :initial_pickup -%>
+    <%= f.datetime_select :initial_pickup  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :secondary_pickup -%>
+    <%= f.datetime_select :secondary_pickup  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :passenger_count -%>
+    <%= f.number_field :passenger_count  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.number_field :price  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :cab_type -%>
+    <%= f.number_field :cab_type  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :completed -%>
+    <%= f.datetime_select :completed  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.bookings.admin.bookings.booking'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @booking.customer_name) %>
+<% end -%>

@@ -1,0 +1,37 @@
+en:
+  refinery:
+    plugins:
+      bookings:
+        title: Bookings
+    bookings:
+      admin:
+        bookings:
+          actions:
+            create_new: Add New Booking
+            reorder: Reorder Bookings
+            reorder_done: Done Reordering Bookings
+          records:
+            title: Bookings
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Bookings yet. Click "Add New Booking" to add your first booking.
+          booking:
+            view_live_html: View this booking live <br/><em>(opens in a new window)</em>
+            edit: Edit this booking
+            delete: Remove this booking forever
+      bookings:
+        show:
+          other: Other Bookings
+  activerecord:
+    attributes:
+      'refinery/bookings/booking':
+        customer_name: Customer Name
+        customer_phone: Customer Phone
+        customer_email: Customer Email
+        starting_location: Starting Location
+        ending_location: Ending Location
+        initial_pickup: Initial Pickup
+        secondary_pickup: Secondary Pickup
+        passenger_count: Passenger Count
+        price: Price
+        cab_type: Cab Type
+        completed: Completed

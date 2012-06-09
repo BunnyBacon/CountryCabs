@@ -1,0 +1,87 @@
+<% content_for :body_content_title do %>
+  <%= @booking.customer_name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Customer Name</h1>
+    <p>
+      <%=raw @booking.customer_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Customer Phone</h1>
+    <p>
+      <%=raw @booking.customer_phone %>
+    </p>
+  </section>
+  <section>
+    <h1>Customer Email</h1>
+    <p>
+      <%=raw @booking.customer_email %>
+    </p>
+  </section>
+  <section>
+    <h1>Starting Location</h1>
+    <p>
+      <%=raw @booking.starting_location %>
+    </p>
+  </section>
+  <section>
+    <h1>Ending Location</h1>
+    <p>
+      <%=raw @booking.ending_location %>
+    </p>
+  </section>
+  <section>
+    <h1>Initial Pickup</h1>
+    <p>
+      <%=raw @booking.initial_pickup %>
+    </p>
+  </section>
+  <section>
+    <h1>Secondary Pickup</h1>
+    <p>
+      <%=raw @booking.secondary_pickup %>
+    </p>
+  </section>
+  <section>
+    <h1>Passenger Count</h1>
+    <p>
+      <%=raw @booking.passenger_count %>
+    </p>
+  </section>
+  <section>
+    <h1>Price</h1>
+    <p>
+      <%=raw @booking.price %>
+    </p>
+  </section>
+  <section>
+    <h1>Cab Type</h1>
+    <p>
+      <%=raw @booking.cab_type %>
+    </p>
+  </section>
+  <section>
+    <h1>Completed</h1>
+    <p>
+      <%=raw @booking.completed %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="bookings">
+      <% @bookings.each do |booking| %>
+        <li>
+          <%= link_to booking.customer_name, refinery.bookings_booking_path(booking) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

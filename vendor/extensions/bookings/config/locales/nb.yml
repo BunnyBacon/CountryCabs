@@ -1,0 +1,37 @@
+nb:
+  refinery:
+    plugins:
+      bookings:
+        title: Bookings
+    bookings:
+      admin:
+        bookings:
+          actions:
+            create_new: Lag en ny Booking
+            reorder: Endre rekkefølgen på Bookings
+            reorder_done: Ferdig å endre rekkefølgen Bookings
+          records:
+            title: Bookings
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Bookings enda. Klikk på "Lag en ny Booking" for å legge til din første booking.
+          booking:
+            view_live_html: Vis hvordan denne booking ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne booking
+            delete: Fjern denne booking permanent
+      bookings:
+        show:
+          other: Andre Bookings
+  activerecord:
+    attributes:
+      'refinery/bookings/booking':
+        customer_name: Customer Name
+        customer_phone: Customer Phone
+        customer_email: Customer Email
+        starting_location: Starting Location
+        ending_location: Ending Location
+        initial_pickup: Initial Pickup
+        secondary_pickup: Secondary Pickup
+        passenger_count: Passenger Count
+        price: Price
+        cab_type: Cab Type
+        completed: Completed

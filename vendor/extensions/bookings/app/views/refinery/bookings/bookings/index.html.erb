@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="bookings">
+    <% @bookings.each do |booking| %>
+      <li>
+        <%= link_to booking.customer_name, refinery.bookings_booking_path(booking) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
